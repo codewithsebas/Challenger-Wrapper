@@ -1,7 +1,7 @@
 export default function Header() {
     return (
         <header>
-            <div className="image">
+            <div className="logo">
                 <img src="/Vector.svg" alt="Logo" />
             </div>
             <ul className="menu">
