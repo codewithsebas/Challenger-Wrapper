@@ -28,7 +28,6 @@ header {
 
 ul li{
   display: flex;
-
   align-items: center;
   list-style: none;
   color: #fff;
@@ -234,4 +233,87 @@ h3 {
 .row {
   display: flex;
   align-items: center; justify-content: space-between;
+}
+
+
+footer {
+  margin-top: 100px;
+  width: auto;
+  background-color: #FD9255;
+  padding: 100px 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: center;
+  justify-content: space-around;
+}
+
+.socials {
+  display: flex;
+  gap: 10px;
+}
+
+.logoFooter {
+  color: #FFFFFF;
+}
+
+.twitter {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.facebook {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.instagram {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #FFFFFF;
+  display: flex;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.whatsapp {
+  border: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: transparent;
+}
+
+.menuFooter {
+  display: flex;
+  gap: 50px;
+}
+
+.minMenu {
+  display: flex;
+  flex-direction: column;
+  color: #FFFFFF;
+  gap: 30px;
+}
+
+.minTitle {
+  color: #FFFFFF;
+  font-weight: 400;
+  font-size: 35px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  list-style: none;
+  gap: 20px;
 }

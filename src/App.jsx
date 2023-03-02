@@ -12,6 +12,7 @@ import imagen7 from "./assets/image7.svg";
 import imagen8 from "./assets/image8.svg";
 import imagen9 from "./assets/image9.svg";
 import imagen10 from "./assets/image10.svg";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -77,6 +78,7 @@ function App() {
           </div>
         </form>
       </main>
+      <Footer />
     </>
   );
 }
