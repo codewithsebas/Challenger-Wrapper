@@ -1,7 +1,7 @@
 header {
   width: auto;
   background-color: #FD9255;
-  padding: 1rem 2rem;
+  padding: 30px 15px;
   display: flex;
   flex-wrap: wrap;
   justify-items: center;
@@ -60,6 +60,8 @@ main {
 
 .form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
 }
 
@@ -152,4 +154,47 @@ main {
   border: none;
   padding-left: 15px;
   outline: none;
+}
+
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.clear {
+  width: 200px;
+  padding: 20px;
+  border: 2px solid #FD9255;
+  color: #222222;
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.clear:hover {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.calculate {
+  width: 200px;
+  padding: 20px;
+  background-color: #FD9255;
+  color: #222222;
+  border: none;
+  border-radius: 5px;
+  font-weight: 400;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.calculate:hover {
+  background-color: #ff9d64;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }

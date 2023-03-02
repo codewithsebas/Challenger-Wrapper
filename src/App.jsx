@@ -37,7 +37,12 @@ function App() {
             <Product image={imagen8} name="Beds" />
             <Product image={imagen9} name="Beds" />
             <Product image={imagen10} name="Beds" />
+            <div className="buttons">
+            <button className="clear" type="button">Clear</button>
+            <button className="calculate" type="button">Calculate</button>
           </div>
+          </div>
+         
         </form>
       </main>
     </>
