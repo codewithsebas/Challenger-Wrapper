@@ -38,11 +38,43 @@ function App() {
             <Product image={imagen9} name="Beds" />
             <Product image={imagen10} name="Beds" />
             <div className="buttons">
-            <button className="clear" type="button">Clear</button>
-            <button className="calculate" type="button">Calculate</button>
+              <button className="clear" type="button">
+                Clear
+              </button>
+              <button className="calculate" type="button">
+                Calculate
+              </button>
+            </div>
+            <div className="containResult">
+              <h1 className="titleResult">Summary</h1>
+              <div className="result">
+                <div className="row">
+                  <h3>Total Items</h3>
+                  <p>12</p>
+                </div>
+                <div className="row">
+                  <h3>Total M2</h3>
+                  <p>8.55</p>
+                </div>
+                <div className="row">
+                  <h3>Subtotal</h3>
+                  <p>$1,710</p>
+                </div>
+                <div className="row">
+                  <h3>Tax</h3>
+                  <p>$273.6</p>
+                </div>
+                <div className="row">
+                  <h3 className="total">Total</h3>
+                  <p className="total">$1,983.6</p>
+                </div>
+                <div className="row">
+                  <h3 className="total">Due Today 50%</h3>
+                  <p className="total">$991.8</p>
+                </div>
+              </div>
+            </div>
           </div>
-          </div>
-         
         </form>
       </main>
     </>

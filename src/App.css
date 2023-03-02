@@ -198,3 +198,40 @@ main {
   background-color: #ff9d64;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+
+
+.containResult {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.titleResult {
+  text-align: center;
+  color: #06170B;
+  font-weight: 400;
+  font-size: 45px;
+  line-height: 1;
+}
+
+.result {
+  width: 300px;
+  background-color: #F9F9F9;
+  padding: 10px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+h3 {
+  line-height: 0;
+  font-weight: 400;
+}
+
+.total {
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  align-items: center; justify-content: space-between;
+}
