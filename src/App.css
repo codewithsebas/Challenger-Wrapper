@@ -4,6 +4,7 @@ header {
   padding: 30px 15px;
   display: flex;
   flex-wrap: wrap;
+  gap: 40px;
   justify-items: center;
   justify-content: space-around;
 }
@@ -65,7 +66,7 @@ main {
 }
 
 .products {
-  max-width: 70%;
+  max-width: 80%;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -159,8 +160,8 @@ main {
 .buttons {
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 60px;
 }
 
 .clear {
@@ -200,6 +201,8 @@ main {
 
 
 .containResult {
+  width: 100%;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   gap: 30px;
@@ -214,7 +217,6 @@ main {
 }
 
 .result {
-  width: 300px;
   background-color: #F9F9F9;
   padding: 10px 30px;
   display: flex;
@@ -222,7 +224,7 @@ main {
 }
 
 h3 {
-  line-height: 0;
+  line-height: 1;
   font-weight: 400;
 }
 
@@ -232,6 +234,7 @@ h3 {
 
 .row {
   display: flex;
+  flex-wrap: wrap;
   align-items: center; justify-content: space-between;
 }
 
@@ -243,6 +246,7 @@ footer {
   padding: 100px 15px;
   display: flex;
   flex-wrap: wrap;
+  gap: 30px;
   justify-items: center;
   justify-content: space-around;
 }
@@ -294,6 +298,8 @@ footer {
 
 .menuFooter {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 50px;
 }
 
