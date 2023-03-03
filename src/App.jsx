@@ -13,8 +13,73 @@ import imagen8 from "./assets/image8.svg";
 import imagen9 from "./assets/image9.svg";
 import imagen10 from "./assets/image10.svg";
 import Footer from "./components/Footer";
+import { useState } from "react";
 
 function App() {
+  let totalItems = 0;
+  const handleReset = () => {
+    setBeds(0);
+    setRefrigerador(0);
+    setFurniture(0);
+    setOven(0);
+    setSofa(0);
+    setTv(0);
+    setWasherDryer(0);
+    setDining(0);
+    setDesk(0);
+    setWardrobe(0);
+  };
+
+  const [beds, setBeds] = useState(0);
+  if (beds === -1) {
+    return setBeds(0);
+  }
+
+  const [refrigerador, setRefrigerador] = useState(0);
+  if (refrigerador === -1) {
+    return setRefrigerador(0);
+  }
+
+  const [furniture, setFurniture] = useState(0);
+  if (furniture === -1) {
+    return setFurniture(0);
+  }
+
+  const [oven, setOven] = useState(0);
+  if (oven === -1) {
+    return setOven(0);
+  }
+
+  const [sofa, setSofa] = useState(0);
+  if (sofa === -1) {
+    return setSofa(0);
+  }
+
+  const [tv, setTv] = useState(0);
+  if (tv === -1) {
+    return setTv(0);
+  }
+
+  const [washerDryer, setWasherDryer] = useState(0);
+  if (washerDryer === -1) {
+    return setWasherDryer(0);
+  }
+
+  const [dining, setDining] = useState(0);
+  if (dining === -1) {
+    return setDining(0);
+  }
+
+  const [desk, setDesk] = useState(0);
+  if (desk === -1) {
+    return setDesk(0);
+  }
+
+  const [wardrobe, setWardrobe] = useState(0);
+  if (wardrobe === -1) {
+    return setWardrobe(0);
+  }
+
   return (
     <>
       <Header />
@@ -28,30 +93,351 @@ function App() {
         </div>
         <form className="form">
           <div className="products">
-            <Product image={imagen1} name="Beds" />
-            <Product image={imagen2} name="Refrigerador" />
-            <Product image={imagen3} name="Beds" />
-            <Product image={imagen4} name="Beds" />
-            <Product image={imagen5} name="Beds" />
-            <Product image={imagen6} name="Beds" />
-            <Product image={imagen7} name="Beds" />
-            <Product image={imagen8} name="Beds" />
-            <Product image={imagen9} name="Beds" />
-            <Product image={imagen10} name="Beds" />
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen1} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Beds</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setBeds(beds - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={beds}
+                  onChange={(e) => setBeds(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setBeds(beds + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen2} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Refrigerador</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setRefrigerador(refrigerador - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={refrigerador}
+                  onChange={(e) => setRefrigerador(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setRefrigerador(refrigerador + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen3} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Furniture</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setFurniture(furniture - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={furniture}
+                  onChange={(e) => setFurniture(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setFurniture(furniture + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen4} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Oven</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setOven(oven - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={oven}
+                  onChange={(e) => setOven(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setOven(oven + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen5} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Sofa</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setSofa(sofa - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={sofa}
+                  onChange={(e) => setSofa(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setSofa(sofa + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen6} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">TV</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setTv(tv - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={tv}
+                  onChange={(e) => setTv(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setTv(tv + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen7} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Washer-dryer</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setWasherDryer(washerDryer - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={washerDryer}
+                  onChange={(e) => setWasherDryer(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setWasherDryer(washerDryer + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen8} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Dining</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setDining(dining - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={dining}
+                  onChange={(e) => setDining(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setDining(dining + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen9} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Desk</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setDesk(desk - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={desk}
+                  onChange={(e) => setDesk(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setDesk(desk + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
+
+            <div className="containProduct">
+              <div className="product">
+                <div className="contentImage">
+                  <img className="image" src={imagen8} alt="Imagen" />
+                </div>
+                <h1 className="titleProduct">Wardrobe</h1>
+              </div>
+              <div className="incrementDecrement">
+                <button
+                  type="button"
+                  className="decrement"
+                  onClick={() => setWardrobe(wardrobe - 1)}
+                >
+                  -
+                </button>
+                <input
+                  className="input"
+                  type="number"
+                  placeholder="0"
+                  value={wardrobe}
+                  onChange={(e) => setWardrobe(e.target.value)}
+                />
+                <button
+                  type="button"
+                  className="increment"
+                  onClick={() => setWardrobe(wardrobe + 1)}
+                >
+                  +
+                </button>
+              </div>
+            </div>
             <div className="buttons">
-              <button className="clear" type="button">
+              <button className="clear" type="button" onClick={handleReset}>
                 Clear
               </button>
-              <button className="calculate" type="button">
-                Calculate
-              </button>
+              <button className="calculate">Calculate</button>
             </div>
             <div className="containResult">
               <h1 className="titleResult">Summary</h1>
               <div className="result">
                 <div className="row">
                   <h3>Total Items</h3>
-                  <p>12</p>
+                  <p>
+                    {
+                      (totalItems =
+                        beds +
+                        refrigerador +
+                        furniture +
+                        oven +
+                        sofa +
+                        tv +
+                        washerDryer +
+                        dining +
+                        desk +
+                        wardrobe)
+                    }
+                  </p>
                 </div>
                 <div className="row">
                   <h3>Total M2</h3>

@@ -152,8 +152,9 @@ main {
   width: 100%;
   background: #FFFFFF;
   border: none;
-  padding-left: 15px;
   outline: none;
+  text-align: center;
+  pointer-events: none;
 }
 
 
