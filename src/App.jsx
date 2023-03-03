@@ -437,28 +437,35 @@ function App() {
               <h1 className="titleResult">Summary</h1>
               <div className="result">
                 <div className="row">
-                  <h3>Total Items</h3>
-                  <p>
-                    {
-                      (totalItems =
-                        beds +
-                        refrigerador +
-                        furniture +
-                        oven +
-                        sofa +
-                        tv +
-                        washerDryer +
-                        dining +
-                        desk +
-                        wardrobe)
-                    }
-                  </p>
+                  <div className="col">
+                    <h3>Total Items</h3>
+                  </div>
+                  <div className="col-2">
+                    <p>
+                      {
+                        (totalItems =
+                          beds +
+                          refrigerador +
+                          furniture +
+                          oven +
+                          sofa +
+                          tv +
+                          washerDryer +
+                          dining +
+                          desk +
+                          wardrobe)
+                      }
+                    </p>
+                  </div>
                 </div>
+
                 <div className="row">
-                  <h3>Total M2</h3>
-                  <p>
-                    {
-                      (totalSquare =
+                  <div className="col">
+                    <h3>Total m²</h3>
+                  </div>
+                  <div className="col-2">
+                    <p>
+                      {(totalSquare =
                         squareMeters.beds * beds +
                         squareMeters.refrigerador * refrigerador +
                         squareMeters.furniture * furniture +
@@ -469,24 +476,66 @@ function App() {
                         squareMeters.dining * dining +
                         squareMeters.desk * desk +
                         squareMeters.wardrobe * wardrobe)
-                    }
-                  </p>
+                        .toFixed(2)
+                        .replace(/.0+$/, "")}
+                    </p>
+                  </div>
                 </div>
+
                 <div className="row">
-                  <h3>Subtotal</h3>
-                  <p>${(subTotal = totalSquare * 200)}</p>
+                  <div className="col">
+                    <h3>Subtotal</h3>
+                  </div>
+                  <div className="col-2">
+                    <p>
+                      $
+                      {(subTotal = totalSquare * 200)
+                        .toFixed(1)
+                        .replace(/.0+$/, "")}
+                    </p>
+                  </div>
                 </div>
+
                 <div className="row">
-                  <h3>Tax</h3>
-                  <p>${(tax = subTotal * 16)}</p>
+                  <div className="col">
+                    <h3>Tax</h3>
+                  </div>
+                  <div className="col-2">
+                    <p>
+                      ${(tax = subTotal * 0.16).toFixed(1).replace(/.0+$/, "")}
+                    </p>
+                  </div>
                 </div>
+
                 <div className="row">
-                  <h3 className="total">Total</h3>
-                  <p className="total">${(total = tax * subTotal)}</p>
+                  <div className="col">
+                    <h3>
+                      <b>Total</b>
+                    </h3>
+                  </div>
+                  <div className="col-2">
+                    <p>
+                      <b>
+                        $
+                        {(total = tax + subTotal)
+                          .toFixed(1)
+                          .replace(/.0+$/, "")}
+                      </b>
+                    </p>
+                  </div>
                 </div>
+
                 <div className="row">
-                  <h3 className="total">Due Today 50%</h3>
-                  <p className="total">${total * 2}</p>
+                  <div className="col">
+                    <h3>
+                      <b>Due Today 50%</b>
+                    </h3>
+                  </div>
+                  <div className="col-2">
+                    <p>
+                      <b>${(total / 2).toFixed(1).replace(/.0+$/, "")}</b>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
