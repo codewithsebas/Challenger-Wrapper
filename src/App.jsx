@@ -434,7 +434,6 @@ function App() {
               <button className="clear" type="button" onClick={handleReset}>
                 Clear
               </button>
-              <button className="calculate">Calculate</button>
             </div>
             <div className="containResult">
               <h1 className="titleResult">Summary</h1>
