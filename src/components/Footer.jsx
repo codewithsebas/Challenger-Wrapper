@@ -7,11 +7,12 @@ export default function Footer() {
   return (
     <footer>
       <div className="logoFooter">
+        <div>
         <img src="/Vector.svg" alt="Logo" />
         <p className="footerDescrip">
           It is a long established fact that a <br /> reader will be distracted
           by the <br />
-          readable content of a page whenters.
+          readable content of a page <br /> whenters.
         </p>
         <div className="socials">
           <div className="twitter">
@@ -25,6 +26,7 @@ export default function Footer() {
           <div className="instagram">
             <img src={instagram} alt="Instagram" />
           </div>
+        </div>
         </div>
       </div>
       <div className="menuFooter">

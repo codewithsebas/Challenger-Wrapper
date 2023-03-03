@@ -1,7 +1,5 @@
 import "./App.css";
 import Header from "./components/Header";
-import Product from "./components/Product";
-
 import imagen1 from "./assets/image1.svg";
 import imagen2 from "./assets/image2.svg";
 import imagen3 from "./assets/image3.svg";
@@ -402,7 +400,7 @@ function App() {
             <div className="containProduct">
               <div className="product">
                 <div className="contentImage">
-                  <img className="image" src={imagen8} alt="Imagen" />
+                  <img className="image" src={imagen10} alt="Imagen" />
                 </div>
                 <h1 className="titleProduct">Wardrobe</h1>
               </div>
