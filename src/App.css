@@ -27,7 +27,7 @@ header {
   gap: 30px;
 }
 
-ul li{
+ul li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -63,14 +63,14 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 30px;
 }
 
 .products {
   max-width: 80%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
 }
 
 .containProduct {
@@ -159,7 +159,7 @@ main {
 
 
 .buttons {
-  width: 100%;
+  width: 63%;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -230,7 +230,8 @@ h3 {
 }
 
 .col {
-  width: 80%; /* Should be removed. Only for demonstration */
+  width: 80%;
+  /* Should be removed. Only for demonstration */
 }
 
 .col-2 {
@@ -247,7 +248,7 @@ footer {
   margin-top: 100px;
   width: auto;
   background-color: #FD9255;
-  padding: 100px 0px;
+  padding: 100px 50px;
   display: flex;
   gap: 10px;
   justify-items: center;
@@ -260,7 +261,6 @@ footer {
 }
 
 .logoFooter {
-  width: 20%;
   max-width: 600px;
   color: #FFFFFF;
   display: flex;
@@ -433,6 +433,31 @@ footer {
   color: #FFFFFF;
 }
 
+@media only screen and (max-width: 1200px) {
+  .products {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  .containProduct {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 180px;
+  }
+
+  .contentImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .buttons {
+    width: 80%;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .menu {
     display: none;
@@ -445,7 +470,7 @@ footer {
   .backClose {
     display: block;
   }
-  
+
   .backCloseSlide {
     display: block;
   }

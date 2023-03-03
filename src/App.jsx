@@ -428,7 +428,9 @@ function App() {
                 </button>
               </div>
             </div>
-            <div className="buttons">
+            
+          </div>
+          <div className="buttons">
               <button className="clear" type="button" onClick={handleReset}>
                 Clear
               </button>
@@ -539,7 +541,6 @@ function App() {
                 </div>
               </div>
             </div>
-          </div>
         </form>
       </main>
       <Footer />
