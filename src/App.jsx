@@ -16,7 +16,25 @@ import Footer from "./components/Footer";
 import { useState } from "react";
 
 function App() {
+  let squareMeters = {
+    beds: 1.2,
+    refrigerador: 1,
+    furniture: 0.5,
+    oven: 0.6,
+    sofa: 1.5,
+    tv: 0.25,
+    washerDryer: 0.5,
+    dining: 2,
+    desk: 0.75,
+    wardrobe: 3.2,
+  };
+
   let totalItems = 0;
+  let totalSquare = 0;
+  let subTotal = 0;
+  let tax = 0;
+  let total = 0;
+
   const handleReset = () => {
     setBeds(0);
     setRefrigerador(0);
@@ -441,23 +459,37 @@ function App() {
                 </div>
                 <div className="row">
                   <h3>Total M2</h3>
-                  <p>8.55</p>
+                  <p>
+                    {
+                      (totalSquare =
+                        squareMeters.beds * beds +
+                        squareMeters.refrigerador * refrigerador +
+                        squareMeters.furniture * furniture +
+                        squareMeters.oven * oven +
+                        squareMeters.sofa * sofa +
+                        squareMeters.tv * tv +
+                        squareMeters.washerDryer * washerDryer +
+                        squareMeters.dining * dining +
+                        squareMeters.desk * desk +
+                        squareMeters.wardrobe * wardrobe)
+                    }
+                  </p>
                 </div>
                 <div className="row">
                   <h3>Subtotal</h3>
-                  <p>$1,710</p>
+                  <p>${(subTotal = totalSquare * 200)}</p>
                 </div>
                 <div className="row">
                   <h3>Tax</h3>
-                  <p>$273.6</p>
+                  <p>${(tax = subTotal * 16)}</p>
                 </div>
                 <div className="row">
                   <h3 className="total">Total</h3>
-                  <p className="total">$1,983.6</p>
+                  <p className="total">${(total = tax * subTotal)}</p>
                 </div>
                 <div className="row">
                   <h3 className="total">Due Today 50%</h3>
-                  <p className="total">$991.8</p>
+                  <p className="total">${total * 2}</p>
                 </div>
               </div>
             </div>
